@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "scripts": {
+    "start": "node ./hello-world.js"
+  },
+  "type": "module"
+}

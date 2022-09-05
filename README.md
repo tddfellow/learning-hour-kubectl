@@ -28,6 +28,12 @@ $ kubectl config set-context --current --namespace=learning-hour
 
 *You can use this command to switch to any named namespace that you have access to.*
 
+## List namespaces
+
+```
+$ kubectl get namespaces
+```
+
 ## Get the list of deployments
 
 *Deployment — the configuration of the running application on the cluster. Controls & manages the actual pods and containers.*

@@ -17,7 +17,7 @@ $ kubectl config get-contexts
 Switch to the specific context:
 
 ```
-$ kubectl config use-context arn:aws:eks:{aws-region}:cluster/{cluster-name}
+$ kubectl config use-context arn:aws:eks:{aws-region}:{aws-account-id}:cluster/{cluster-name}
 ```
 
 ## Switch to the namespace for this learning hour

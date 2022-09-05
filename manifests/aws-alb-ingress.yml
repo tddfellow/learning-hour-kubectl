@@ -1,0 +1,24 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: learning-hour
+  annotations:
+    alb.ingress.kubernetes.io/group.name: ingress-controller
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/target-type: ip
+    kubernetes.io/ingress.class: alb
+  name: hello-world-ingress
+spec:
+  rules:
+    - host: "hello-world.${ROUTE53_PUBLIC_ZONE_NAME}"
+      http:
+        paths:
+          - backend:
+              service:
+                name: hello-world-service
+                port:
+                  number: 8080
+            path: /*
+            pathType: Prefix

@@ -39,7 +39,7 @@ $ kubectl get namespaces
 *Deployment — the configuration of the running application on the cluster. Controls & manages the actual pods and containers.*
 
 ```
-$ kubect get deployments
+$ kubectl get deployments
 ```
 
 You should see something like:
